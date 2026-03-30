@@ -17,7 +17,10 @@
             "reset": "Reset",
             "view_details": "View Details",
             "configure": "Configure",
-            "refresh": "Refresh"
+            "refresh": "Refresh",
+            "cancel": "Cancel",
+            "copy": "Copy",
+            "open_link": "Open Link"
         },
         "sort_by": "Sort by:",
         "time_units": {
@@ -491,7 +494,8 @@
             "favorites_only_tooltip": "Filter favorites only",
             "search_placeholder": "Search",
             "filter_placeholder": "Filter",
-            "load_mutual_friends": "Load Mutual Friends"
+            "load_mutual_friends": "Load Mutual Friends",
+            "mutual_loading_hint": "View progress on the Mutual Friend Graph page"
         },
         "charts": {
             "instance_activity": {
@@ -565,6 +569,17 @@
                     "exclude_friends": "Exclude friends",
                     "exclude_friends_placeholder": "Select friends to exclude",
                     "exclude_friends_help": "Selected friends will be hidden from the graph."
+                },
+                "context_menu": {
+                    "view_details": "View Details",
+                    "hide_friend": "Hide from Graph",
+                    "refresh_mutuals": "Refresh Mutuals",
+                    "confirm_non_friend_title": "Not a Friend",
+                    "confirm_non_friend_message": "This user is no longer your friend. Do you still want to fetch their mutual friends data?",
+                    "refresh_success": "Mutual friends data updated for {name}",
+                    "user_opted_out": "This user has disabled mutual friends sharing. Existing data has been preserved.",
+                    "refresh_error": "Failed to refresh mutual friends data",
+                    "last_fetched": "Last fetched"
                 }
             },
             "hot_worlds": {
@@ -773,7 +788,7 @@
                 },
                 "favorites": {
                     "header": "Favorite Groups Filter",
-                    "header_tooltip": "Choose which favorite groups are treated as VIP for filtering in Feed, Game Log, Notifications, and VR Overlay",
+                    "header_tooltip": "When the favorites filter is enabled on Feed, Game Log, Notifications Page, or VR Overlay, only entries from the selected groups will be shown",
                     "group_placeholder": "Select Groups"
                 },
                 "logging": {
@@ -798,7 +813,8 @@
                     "auto_invite_request_accept": "Auto Accept Invite Requests",
                     "auto_invite_request_accept_tooltip": "Automatically accept invite requests from favorite friends",
                     "auto_invite_request_accept_favs": "All Favorites",
-                    "auto_invite_request_accept_selected_favs": "VRCX Favorites",
+                    "auto_invite_request_accept_favs_hint": "Includes local friend favorite groups",
+                    "auto_invite_request_accept_selected_favs": "Custom Favorite Groups",
                     "change_status_description": "Override Status Description",
                     "status_description_placeholder": "Status description (max 32 characters)",
                     "auto_change_status_groups": "Only count friends from",
@@ -956,9 +972,10 @@
                     "header": "Notifications",
                     "layout": "Notification View",
                     "layout_notification_center": "Notification Center",
-                    "layout_table": "Notifications Tab",
+                    "layout_table": "Notifications Page",
                     "notification_filter": "Notification Filters",
                     "test_notification": "Send Test Notification",
+                    "test_message": "Test notification.",
                     "steamvr_notifications": {
                         "header": "SteamVR Notifications",
                         "steamvr_overlay": "SteamVR Overlay",
@@ -2644,6 +2661,8 @@
             "create_failed": "Failed to create instance"
         },
         "avatar": {
+            "selected": "Avatar changed",
+            "already_selected": "Avatar already selected",
             "change_moderation_failed": "Failed to change avatar moderation",
             "fallback_changed": "Fallback avatar changed",
             "blocked": "Avatar blocked",
@@ -2697,7 +2716,9 @@
         },
         "gallery": {
             "uploaded": "Gallery image uploaded",
-            "failed": "Failed to upload gallery image"
+            "failed": "Failed to upload gallery image",
+            "profile_pic_changed": "Profile picture changed",
+            "profile_icon_changed": "Profile icon changed"
         },
         "upload": {
             "loading": "Uploading",
@@ -2759,6 +2780,44 @@
         },
         "copy_failed": "Copy failed",
         "error": "Error"
+    },
+    "notifications": {
+        "has_joined": "has joined",
+        "has_left": "has left",
+        "is_joining": "is joining",
+        "gps": "is in {location}",
+        "online_location": "has logged in to {location}",
+        "online": "has logged in",
+        "offline": "has logged out",
+        "status_update": "status is now {status} {description}",
+        "invite": "has invited you to {location} {message}",
+        "request_invite": "has requested an invite {message}",
+        "invite_response": "has responded to your invite {message}",
+        "request_invite_response": "has responded to your invite request {message}",
+        "friend_request": "has sent you a friend request",
+        "friend": "is now your friend",
+        "unfriend": "is no longer your friend",
+        "trust_level": "Trust level is now {trustLevel}",
+        "display_name": "changed their name to {displayName}",
+        "group_announcement_title": "Group Announcement",
+        "group_informative_title": "Group Informative",
+        "group_invite_title": "Group Invite",
+        "group_join_request_title": "Group Join Request",
+        "group_transfer_request_title": "Group Transfer Request",
+        "group_queue_ready_title": "Instance Queue Ready",
+        "instance_closed_title": "Instance Closed",
+        "portal_spawn_name": "has spawned a portal to {location}",
+        "portal_spawn": "User has spawned a portal",
+        "avatar_change": "changed into avatar {avatar}",
+        "chat_message": "said: {message}",
+        "blocked_player_joined": "Blocked user has joined",
+        "blocked_player_left": "Blocked user has left",
+        "muted_player_joined": "Muted user has joined",
+        "muted_player_left": "Muted user has left",
+        "blocked": "has blocked you",
+        "unblocked": "has unblocked you",
+        "muted": "has muted you",
+        "unmuted": "has unmuted you"
     },
     "status": {
         "title": "VRChat Status"
@@ -2849,7 +2908,8 @@
             "lastLogin": "Last Login",
             "dateJoined": "Date Joined",
             "unfriend": "Unfriend",
-            "mutualFriends": "Mutual Friends"
+            "mutualFriends": "Mutual Friends",
+            "mutualOptedOut": "This user has disabled mutual friends sharing. Showing cached data."
         },
         "profile": {
             "invite_messages": {
